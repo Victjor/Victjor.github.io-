@@ -1,18 +1,84 @@
 body {
-    background-color: #ede0d4;
+    background-color: #fffcf9;
+opacity: 1;
+background-image: linear-gradient(to right, #f9efe5, #f9efe5 2px, #fffcf9 2px, #fffcf9 );
+background-size: 4px 100%;
 }
+/* Style da Nav Bar VVVV */
 
-header { 
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #DDB892;
+    box-sizing: border-box;
+    font-family: "Funnel Display";
+
+ }
+
+ #navbar a{
+    float: right;
     color: #7f5539;
+    text-align: center;
+    padding: 20px;
+    padding-right: 30px;
+    padding-top: 30px
+    
+ }
+
+ #navbar h1{
+    color: #704b32;
+    padding-left: 2vw;
+    float: left;
+    font-weight: 800px;
+    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13)
+
+    
+ }
+/* Style da Nav Bar ^^^^ */
+
+
+.wrapper {
+    padding: 5% 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .tagline { 
     color: #7f5539;
     font-family: "Funnel Sans";
-    max-width: 600px;
-    padding: 100px;
-    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13)
+    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13);
+    animation: FadeIn 2s ease-in-out;
+    flex: 1;
+    max-width: 45%;
+    min-width: 30%;
+   
+
+
+
 }
- #navbar {
-    
- }
+.tagline h2{
+    font-family: "Funnel Display";
+    font-weight: 700px;
+
+
+}
+
+.hero-img {
+    max-width: 500px;
+    object-fit: cover;
+    border-radius: 20px;   
+}
+
+.button {
+    font-size: 100px;
+}
+
+/*Animations*/ 
+@keyframes FadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
