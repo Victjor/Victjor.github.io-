@@ -1,0 +1,18 @@
+body {
+    background-color: #ede0d4;
+}
+
+header { 
+    color: #7f5539;
+}
+
+.tagline { 
+    color: #7f5539;
+    font-family: "Funnel Sans";
+    max-width: 600px;
+    padding: 100px;
+    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13)
+}
+ #navbar {
+    
+ }
