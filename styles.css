@@ -13,6 +13,9 @@ background-size: 4px 100%;
     background-color: #DDB892;
     box-sizing: border-box;
     font-family: "Funnel Display";
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(127, 85, 57, 0.322);
+    margin-bottom: -1.3vh;
 
  }
 
@@ -20,18 +23,16 @@ background-size: 4px 100%;
     float: right;
     color: #7f5539;
     text-align: center;
-    padding: 20px;
-    padding-right: 30px;
-    padding-top: 30px
+    padding: 3vh 2vw 2vh 2vw;
     
  }
 
  #navbar h1{
     color: #704b32;
-    padding-left: 2vw;
+    padding: 2vh 2vw 2vh 2vw;
     float: left;
     font-weight: 800px;
-    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13)
+    text-shadow: 2px 2px 5px rgba(127, 85, 57, 0);
 
     
  }
@@ -39,7 +40,7 @@ background-size: 4px 100%;
 
 
 .wrapper {
-    padding: 5% 20px;
+    padding: 5% 2vh 5% 2vh; 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -51,15 +52,15 @@ background-size: 4px 100%;
     color: #7f5539;
     font-family: "Funnel Sans";
     text-shadow: 2px 2px 5px rgb(127,85,57, 0.13);
-    animation: FadeIn 2s ease-in-out;
+    animation: FadeIn 2s ease-in-out, SlideToRight 2s ease-in-out;
     flex: 1;
     max-width: 45%;
     min-width: 30%;
-   
-
-
 
 }
+
+   
+
 .tagline h2{
     font-family: "Funnel Display";
     font-weight: 700px;
@@ -68,17 +69,204 @@ background-size: 4px 100%;
 }
 
 .hero-img {
-    max-width: 500px;
     object-fit: cover;
-    border-radius: 20px;   
+    border-radius: 0px 25px;
+    animation: SlideToLeft 2s ease-in-out, FadeIn 2s ease-in-out;
+    box-shadow: 9px -9px 0px 0px rgba(112,75,50,1);
 }
 
-.button {
-    font-size: 100px;
+.main-button {
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex;
+    margin-top: 3vh;
 }
+
+
+ button{ 
+    background-color: #704b32;
+    font-size: 27px;
+    padding: 20px 35px 20px 35px;
+    font-family: "Funnel Display";
+    font-weight: 500;
+    color: #DDB892;
+    border-radius: 10px;
+    border-color: #DDB892;
+    border-width: thick;
+    border-style: solid;
+    animation: FadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(51, 33, 22, 0.37);
+    cursor: pointer;
+
+ }
+
+ /* VV Marquee Infinito VV */ 
+
+.heard {
+    text-align: center;
+    padding: 25px;
+    font-family: "Funnel Display";
+    font-weight: 600;
+    font-weight: 600;
+    color: #7f5539;
+    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13);
+    animation: FadeIn 3s ease-in-out;
+
+
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background-color: #e7d8c9;
+    padding: 14px 0px 14px 0px;
+}
+
+.marquee-container:before,
+.marquee-container:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+
+}
+
+.marquee-container:before{
+    left: 0;
+    background: linear-gradient(to left, rgba( 255, 225, 255, 0), #f9efe5);
+}
+
+.marquee-container:after{
+    right: 0;
+    background: linear-gradient(to right, rgba( 255, 225, 255, 0), #f9efe5);
+}
+
+
+.marquee-container:hover .logo-slider {
+    animation-play-state: paused;
+}
+
+.logo-slider {
+    display: inline-block;
+    animation: marquee 50s infinite linear, FadeIn 4s ease-in-out;
+    width: 200%;
+    padding-left: 30px;
+
+}
+
+ .logo-slider img{
+    width: 50%;
+    flex-shrink: 0;
+ }
+
+ /* ^^ Marquee Infinito ^^*/ 
+
+ .Essentials{ 
+    text-align: center;
+    font-family: "Funnel Display";
+    font-weight: 600;
+    font-weight: 600;
+    color: #7f5539;
+    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13);
+    animation: FadeIn 5s ease-in-out;
+    margin-bottom: 0;
+    margin-top: 1vh;
+ }
+
+/* ^^ Arrow pra baixo ^^*/ 
+
+.arrow-down img{
+    max-width: 30px;
+    display: block;
+    margin: 20px auto 0px auto;
+    animation: FadeIn 6s ease-in-out, bounce 2s infinite;
+}
+    
+/* ^^ Arrow pra baixo ^^*/
+
+
+.wrapper-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.wrapper-two div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 5% 0% 5%;
+    max-width: 25%;
+    box-sizing: border-box;
+
+}
+
+.column {
+    max-width: 100%;;
+}
+
+.column-right h2, .column-right p{
+    font-family: "Funnel Display";
+    font-weight: 700px;
+    color: #DDB892;
+    text-shadow: 2px 2px 5px rgba(127, 85, 57, 0.13);
+    background-color: #704b32;
+    padding: 2vh;
+    border-radius: 10px 0px
+}
+
+
+
 
 /*Animations*/ 
 @keyframes FadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+@keyframes SlideToLeft { 
+    0%{ transform: translateX(30px);}
+    100%{ transform: translateX(0%);}
+}
+
+@keyframes SlideToRight { 
+    0%{ transform: translateX(-30px);}
+    100%{ transform: translateX(0%);}
+}
+
+@keyframes marquee { 
+    from {transform: translateX(0%);}
+    to {transform: translateX(-100%);}
+}
+
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0;
+        top: 45%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
