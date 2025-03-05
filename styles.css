@@ -204,7 +204,7 @@ background-size: 4px 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0% 5% 0% 5%;
+    padding: 0% 4% 0% 4%;
     max-width: 25%;
     box-sizing: border-box;
 
@@ -221,11 +221,67 @@ background-size: 4px 100%;
     text-shadow: 2px 2px 5px rgba(127, 85, 57, 0.13);
     background-color: #704b32;
     padding: 2vh;
-    border-radius: 10px 0px
+    border-radius: 20px 0px;
+}
+
+.column-left h2, .column-left p{
+    font-family: "Funnel Display";
+    font-weight: 700px;
+    color: #DDB892;
+    text-shadow: 2px 2px 5px rgba(127, 85, 57, 0.13);
+    background-color: #704b32;
+    padding: 2vh;
+    border-radius: 0px 20px;
 }
 
 
+.clients {
+    text-align: center;
+    padding-top: 4vh;
+    font-family: "Funnel Display";
+    font-weight: 600;
+    font-weight: 600;
+    color: #7f5539;
+    text-shadow: 2px 2px 5px rgb(127,85,57, 0.13);
+    animation: FadeIn 3s ease-in-out;
+}
 
+/* Review Slider */
+.review-slider {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px;
+  display: block;
+}
+
+.review-slide {
+  display: none;
+  text-align: center;
+  padding:20px;
+}
+
+.review-slide.active {
+  display: block;
+}
+
+button.prev, button.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  background: none; /* Ensure no background */
+  border: none; /* Remove border if any */
+}
+
+button.prev {
+  left: 10px; /* Adjust as needed */
+}
+
+button.next {
+  right: 10px; /* Adjust as needed */
+}
 
 /*Animations*/ 
 @keyframes FadeIn {
@@ -248,18 +304,6 @@ background-size: 4px 100%;
     to {transform: translateX(-100%);}
 }
 
-@keyframes arrow-movement {
-    0% { 
-        opacity: 0;
-        top: 45%;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% { 
-        opacity: 0;
-    }
-}
 
 @keyframes bounce {
     0%, 100% {
